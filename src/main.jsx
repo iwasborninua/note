@@ -17,6 +17,7 @@ import EditContact, {
     loader as editLoader,
     action as editAction
 } from "./routes/edit.jsx";
+import {action as destroyAction} from './routes/destroy';
 
 
 const router = createBrowserRouter([
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
                 element: <EditContact />,
                 loader: editLoader,
                 action: editAction
+            },
+            {
+                path: "contacts/:contactId/destroy",
+                action: destroyAction
             },
         ],
     },
