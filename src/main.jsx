@@ -29,6 +29,10 @@ const router = createBrowserRouter([
         action: rootAction,
         children: [
             {
+                index: true,
+                element: <>hui</>
+            },
+            {
                 path: "contacts/:contactId",
                 element: <Contact />,
                 loader: contactLoader
